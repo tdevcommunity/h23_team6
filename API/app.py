@@ -8,7 +8,7 @@ from db import db
 import models
 
 
-# from resources.accueil import blp as AccueilBlueprint
+from resources.article import blp as ArticleBlueprint
 
 def create_app():
     app = Flask(__name__)
@@ -42,6 +42,6 @@ def create_app():
     with app.app_context():
         db.create_all()
 
-    # api.register_blueprint(AccueilBlueprint)
+    api.register_blueprint(ArticleBlueprint)
 
     return app
